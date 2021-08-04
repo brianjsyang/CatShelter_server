@@ -16,7 +16,8 @@ app.use(cors());
 // Set up Mongoose Connection  ... Creates default connection to the database and binds to error event.
 var mongoose = require('mongoose');
 mongoose.set('useFindAndModify', false);
-var mongoDB = 'mongodb+srv://mern:mongodb1@cluster0.ti09s.mongodb.net/Cats?retryWrites=true&w=majority';
+var dev_db_url = 'mongodb+srv://mern:mongodb1@cluster0.ti09s.mongodb.net/Cats?retryWrites=true&w=majority';
+var mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
