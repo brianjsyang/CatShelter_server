@@ -5,7 +5,7 @@ var cors = require('cors');
 // Require Controller module.
 var cat_controller = require('../controllers/catController');
 
-const cors_option = { origin: 'https://floating-earth-83638.herokuapp.com/', }
+const cors_option = { origin: 'https://floating-earth-83638.herokuapp.com', }
 
 /// CAT ROUTES ///
 
