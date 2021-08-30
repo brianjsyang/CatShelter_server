@@ -5,7 +5,11 @@ var cors = require('cors');
 // Require Controller module.
 var cat_controller = require('../controllers/catController');
 
+// API response for Heroku
 const cors_option = { origin: 'https://floating-earth-83638.herokuapp.com', }
+
+// API reponse for Local Host
+//const cors_option = { origin: 'http://localhost:3000', } 
 
 /// CAT ROUTES ///
 

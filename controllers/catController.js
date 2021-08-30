@@ -16,7 +16,6 @@ exports.cat_list = function(req, res, next) {
 
 // Display specific page for specifc Cat.
 exports.cat_detail = function(req, res, next) {
-    //res.send('NOT IMPLEMENTED: Cat detail: ' + req.params.id);
 
     Cat.findById(req.params.id)
     .exec(function (err, detail_cat) {
